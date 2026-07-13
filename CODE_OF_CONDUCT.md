@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-We are on the same team. Let's try to make this package (and working on the package) great for everyone.
+We are on the same team. Let's try to make this community great for everyone.
 
 ## Our Standards
 
