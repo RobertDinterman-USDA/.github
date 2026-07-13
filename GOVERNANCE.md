@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document provides roles, rules, and requirements for users of the Rural Development (RD) GitHub Organization within the United States Department of Agriculture (USDA) GitHub Enterprise Account. In addition, this describes potential use cases for this platform and suggestions for how to successfully collaborate. 
+This document provides roles, rules, and requirements for users of the Rural Development (RD) GitHub Organization within the United States Department of Agriculture (USDA) GitHub Enterprise Account. In addition, this describes potential use cases for this platform and suggestions for how to successfully collaborate.
 
-USDA manages a FedRAMP-authorized [GitHub Enterprise Cloud Organization](https://github.com/enterprises/usda-hq) that USDA agencies and mission areas can use to manage source code; establish version control; collaborate on code development; and implement software delivery workflows. USDA agencies and mission areas can create and manage sub-organizations within the USDA GitHub Enterprise Cloud; these sub-organizations can then be used to create and manage repositories for individual applications or projects. RD owns and maintains one such [GitHub Organization](https://github.com/USDA-RD) .
+USDA manages a FedRAMP-authorized [GitHub Enterprise Cloud Organization](https://github.com/enterprises/usda-hq) that USDA agencies and mission areas can use to manage source code; establish version control; collaborate on code development; and implement software delivery workflows. USDA agencies and mission areas can create and manage sub-organizations within the USDA GitHub Enterprise Cloud; these sub-organizations can then be used to create and manage repositories for individual applications or projects. RD owns and maintains one such [GitHub Organization](https://github.com/USDA-RD).
 
 GitHub is a cloud-based platform built on top of Git that allows users to store, share, and work on code. Git is a version control system that tracks changes to code over time. Both have historical ties to software development as tools to effectively collaborate for projects with one or more individuals as they allow for tracking changes to the project over time to mark different versions. They also allow for individual contributors to stay up to date with the work of other contributors on the project, which allows for better development on local machines for individual contributors and reduces frictions related to simultaneously editing code by multiple individuals. While these features are useful for software development workflows, these features have also been found to work well for any projects that require careful tracking or collaborating of text-based inputs that produce some content. This can be code for an application, code to munge data, code for statistical analysis, text for producing a manuscript, or a host of other uses. <https://docs.github.com/en/get-started/start-your-journey/about-github-and-git>
 
@@ -12,7 +12,7 @@ This document assumes the reader has a basic understanding of [Git](https://git-
 
 ### Exclusions
 
-This document explicitly does not address decisions made by the Office of the Chief Information Officer (OCIO), owners/managers of the USDA GitHub Enterprise, or access / IT support. Changes made by these groups may impact the way that our USDA-RD organization works. 
+This document explicitly does not address decisions made by the Office of the Chief Information Officer (OCIO), owners/managers of the USDA GitHub Enterprise, or access / IT support. Changes made by these groups may impact the way that our USDA-RD organization works.
 
 ## [Organization](https://docs.github.com/en/organizations)
 
@@ -24,11 +24,9 @@ GitHub [best practices](https://docs.github.com/en/organizations/collaborating-w
 
 ## [Teams](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams)
 
-Teams are groups of Organization members that reflect a group's structure with cascading access permissions and mentions. Teams can also nest other Teams within a given Team to create a hierarchical structure. USDA-RD Owners have discretion to create Teams within USDA-RD and will do so adhering to the organizational structure of the Rural Development Mission Area.[DN2.1][SC3.1][RD3.2][SC3.3]
+Teams are groups of Organization members that reflect a group's structure with cascading access permissions and mentions. Teams can also nest other Teams within a given Team to create a hierarchical structure. USDA-RD Owners have discretion to create Teams within USDA-RD as a way to easily group people together as opposed to granting access or permissions at an individual level.
 
-For collaboration across divisions in Rural Development, USDA-RD Owners have the discretion to create unique Teams to facilitate easier collaboration across the entire Organization. This may be appropriate for integrating with platforms such as Databricks for DevOps procedures that involve more than one stakeholder.[SC4.1]
-
-Teams in USDA-RD can be based around a unit, like a division or branch within the RD structure, or around projects. Individuals may be in more than one Team. For example, jon-snow-usda might be in some division where he collaborates on code for data extraction and be in some Team where he collaborates on code for a public facing tool. There are no limits on how many Teams an individual can be included in nor how many Teams can exist within the Organization. However, it is not meaningful to have a Team for every project or repository. If you feel like you need a Team and cannot create it yourself for any reason, request it to an Owner[MM5.1][RD5.2][MM5.3] as outlined for [Becoming a User](#becoming-a-user).
+Teams in USDA-RD can be based around a unit, like a division or branch within the RD structure, or around projects. Individuals may be in more than one Team. For example, jon-snow-usda might be in some division where he collaborates on code for data extraction and be in some Team where he collaborates on code for a public facing tool. There are no limits on how many Teams an individual can be included in nor how many Teams can exist within the Organization. However, it is not meaningful to have a Team for every project or repository. If you feel like you need a Team and cannot create it yourself for any reason, request it to an Owner as outlined for [Becoming a User](#becoming-a-user).
 
 Every Team within the USDA-RD Organization is required to have at least one _Team Maintainer_ with permissions equivalent to Maintain access.
 
@@ -36,23 +34,23 @@ You can find the _Team Maintainer_ within a given Team through the Settings opti
 
 ## [Repositories](https://docs.github.com/en/repositories)  
 
-Repositories are the building block of collaboration on GitHub. A repository contains all a project's code, files, and each file's revision history. There is a template repository that contains some very basic files that you may want to reference when you are first getting started.[SC6.1] Teams can discuss and manage their work within a repository by creating issues or using turning on the [Discussions]( https://docs.github.com/en/discussions) feature on GitHub.
+Repositories are the building block of collaboration on GitHub. A repository contains all a project's code, files, and each file's revision history. There is a template repository that contains some very basic files that you may want to reference when you are first getting started. Teams can discuss and manage their work within a repository by creating issues or using turning on the [Discussions]( https://docs.github.com/en/discussions) feature on GitHub.
 
-Each repository should have a README and a member with Maintain privileges, the repository Maintainer. Do not store any personally identifiable information (PII), application programming interface (API) Keys/Tokens, or secrets[MM7.1][SC7.2] within any repository.
+Repositories are created at the Organization level and can have the settings of Private or Internal depending on sensitivity of the project. Once created, a Repository can be associated with one or more Teams although this is not necessary. See [Setting repository visibility](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) for more information.
+
+Each repository should have a README and a member with Maintain privileges, the repository Maintainer. Do not store any personally identifiable information (PII), application programming interface (API) Keys/Tokens, or secrets within any repository.
 
 ### [Visibility Rules](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams#team-visibility)
 
-Repositories can be designated as Internal, Private, or Public. By default, all repositories in USDA-RD are created as internal repositories that anyone within the Enterprise can access. Sensitive projects or those that are incomplete or meant solely for testing can be designated as private to avoid dissemination across USDA-RD Organization.
+Repositories can be designated as Internal, Private, or Public. By default, all repositories in USDA-RD are created as Internal repositories that anyone within the Enterprise can access. Sensitive projects or those that are incomplete or meant solely for testing can be designated as private to avoid dissemination across USDA-RD Organization.
 
 It is the responsibility of the repository Maintainer to ensure that there is approval before making a repository public. Maintainers need Enterprise permission in order to make the repository public, so it is unlikely that this will be accidental.
 
 ### Workflow Standards
 
-Currently, USDA-RD has no rules around how you structure your workflow. This means that it is left to individual repository Maintainers to maintain Pull Request (PR) review requirements, Continuous Integration (CI) and Continuous Delivery/Deployment (CD) enforcement, commit signing, etc. It is our guidance that individuals that are unfamiliar with CI/CD workflows do not implement these as it is unlikely that an individual would need this sort of workflow if they do not even know what it is doing. See [A beginner’s guide to CI/CD and automation on GitHub]( https://github.blog/developer-skills/github/a-beginners-guide-to-ci-cd-and-automation-on-github/) if you want to know more about these issues. 
+Currently, USDA-RD has no rules around how you structure your workflow. This means that it is left to individual repository Maintainers to maintain Pull Request (PR) review requirements, Continuous Integration (CI) and Continuous Delivery/Deployment (CD) enforcement, commit signing, etc. It is our guidance that individuals that are unfamiliar with CI/CD workflows do not implement these as it is unlikely that an individual would need this sort of workflow if they do not even know what it is doing. See [A beginner's guide to CI/CD and automation on GitHub]( https://github.blog/developer-skills/github/a-beginners-guide-to-ci-cd-and-automation-on-github/) if you want to know more about these issues.
 
 By default, Maintainers of a repository are the only ones able to merge a PR. This setting can be adjusted by the Maintainer to allow other users to merge PRs.
-
-PR review requirements, CI/CD enforcement[MM8.1][SC8.2], commit signing, etc. 
 
 ## [User Roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization)
 
@@ -85,6 +83,3 @@ Staff are recommended to set up and use two-factor authentication (2FA) to ensur
 Staff that leave RD will also need to transfer any ownership or maintenance of Repositories and/or Teams within USDA-RD in their off-boarding process. No Repositories or Teams should ever be without a Maintainer.
 
 After leaving RD, former staff will no longer have access to the Organization GitHub.
-
-
--->
