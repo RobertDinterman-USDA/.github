@@ -2,13 +2,13 @@
 
 ## Our Pledge
 
-We are on the same team. Let's try to make this community great for everyone.
+We are all working together. Let's try to make this community great for everyone.
 
 ## Our Standards
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+We will maintain a positive work environment throughout this community. Examples of behavior that contributes to a positive environment for our community include:
 
+* [If You are Asking for Human Attention, Demonstrate Human Effort](https://tombedor.dev/human-attention-and-human-effort/)
 * Demonstrating empathy and kindness toward other people
 * Being respectful of differing opinions, viewpoints, and experiences
 * Giving and gracefully accepting constructive feedback
